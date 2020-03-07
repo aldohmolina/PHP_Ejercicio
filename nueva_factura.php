@@ -52,7 +52,7 @@
             '$tipo_cambio'
         )";
         if($mysqli->query($sql)){
-            echo "<br>Archivo Insertado <br>";
+            echo "<br>Factura Generada Correctamente <br>";
         }else{
             echo "<br> Uppss Algo Fallo <br> $sql <br>";
         }
@@ -71,7 +71,8 @@
         }
         $sql_detalle = substr($sql_detalle,0,-1);
         if($mysqli->query($sql_detalle)){
-            echo "<br>Archivo Insertado <br>";
+            echo "<div><form action='factura_pdf.php'><input type='submit' value='Ver PDF'></form></div>";
+            // echo "<br>Archivo Insertado <br>";
         }else{
             echo "<br> Uppss Algo Fallo <br> $sql_detalle <br>";
         }
