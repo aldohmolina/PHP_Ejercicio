@@ -1,4 +1,5 @@
-<?php 
+<?php
+    // print_r($_POST);
     include "DB/CONEXION.php";
     if (isset($_POST['submit'])) {
         /** Empieza Insert */
@@ -112,7 +113,7 @@
     <div><label for="subtotal">Subtotal</label><input id="subtotal" name="subtotal" type="number"></div>
     <div><label for="IVA">IVA</label><input id="IVA" name="IVA" type="number"></div>
     <div><label for="total">Total</label><input id="total" name="total" type="number"></div>
-    <div><input type="submit" value="Generar Factura"></div>
+    <div><input type="submit" name="submit" value="Generar Factura"></div>
 </form>
 
 
