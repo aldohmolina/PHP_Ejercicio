@@ -1,3 +1,15 @@
+<?php 
+    include "DB/CONEXION.php";
+    if (isset($_POST['submit'])) {
+        /** Empieza Insert */
+        $sql ="aqui va el Query Insert ademas insertar post";
+        if($mysqli->query($sql)){
+            echo "Archivo Insertado";
+        }else{
+            echo "Uppss Algo Fallo";
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +18,7 @@
     <title>Nueva Factura</title>
 </head>
 <body>
-<form action="" method="POST">
+<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
     <div>
         <label for="cliente">Cliente</label>
         <input id="cliente" type="text" name="cliente">
