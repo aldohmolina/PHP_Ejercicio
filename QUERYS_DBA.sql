@@ -1,3 +1,4 @@
+DROP DATABASE dbprueba1;
 CREATE DATABASE dbprueba1 CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 USE dbprueba1;
@@ -26,7 +27,9 @@ CREATE TABLE facturas
   fac_tc VARCHAR(30),
     PRIMARY KEY(fac_id),
     INDEX (cli_id),
-    FOREIGN KEY (cli_id) REFERENCES cliente(cli_id)
+    FOREIGN KEY (cli_id) REFERENCES cliente(cli_id),
+    INDEX(mon_id),
+    FOREIGN KEY (mon_id) REFERENCES monedas(mon_id)
 );
 
 
@@ -42,7 +45,6 @@ CREATE TABLE facturas_detalle
     INDEX (fac_id),
     FOREIGN KEY (fac_id) REFERENCES facturas(fac_id)
 );
-
 
 INSERT INTO cliente VALUES (1, "5639pdf96","Gerardo");
 INSERT INTO cliente VALUES (2, "5639fpd96","Ivan");
