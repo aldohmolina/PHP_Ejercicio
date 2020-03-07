@@ -34,8 +34,8 @@
         <label for="moneda">Moneda</label>
         <select name="moneda" id="moneda">
             <option value="">Seleciona una moneda</option>
-            <option value="">USD</option>
-            <option value="">MXN</option>
+            <option value="1">MXN</option>
+            <option value="2">USD</option>
         </select>
     </div>
     <table>
